@@ -20,8 +20,13 @@ beamer:
 	cp main.md build_pdf
 	cp -R images build_pdf
 	cd build_pdf
-	pandoc -t beamer --template /usr/share/pandoc/data/templates/default.latex \
-		--pdf-engine lualatex --slide-level 3 main.md -o main.pdf
+	pandoc \
+		-t beamer \
+        --template template.beamer \
+		--pdf-engine lualatex \
+        --slide-level 3 \
+        -o main.pdf \
+        main.md
 	cd ..
 
 clean:
