@@ -1,198 +1,163 @@
 ---
-title: Adopting OMERO for your microscopy data
-author: Guillaume Gay, CENTURI
-date: Novembre 2020
+title: Données de microscopie photonique à l'AMU
+subtitle: outils, annotations, stratégies d’adoption
+author: Guillaume Gay, CENTURI Multi-Engineering Platform
+logo: images/bleu.png
+date: 19/11/2021
 fontsize: 10pt
 width: 1024
 height: 780
-center: false
+center: true
+section-titles: false
+theme: Montpellier
+colortheme: seagull
 ...
 
 
 
-# Why?
+# Les images de microscopie de fluorescence
 
-## Microscopy data is big and complex
+## Une grande diversité d'instruments
 
-* Long experiments
-* Screens (maybe not here)
-* Data intensive microscopes (e.g. Light sheet)
-* Complicated data (super-res, speckle)
 
----------
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+\vspace{2cm}
 
-> Need to **organize** both data and metadata
+* Confocal _spinning disk_
+* À feuille de lumières
+* Super-résolution
+* Instruments «faits maison»
+:::
+::: {.column width="50%"}
+![©Roxanne Fabre, CIML](images/Cos7_phaloidin_Roxane_Fabre_CIML.png){ height=80% }
+:::
+::::::::::::::
 
 
-## Keeping data accessible
+## Les plateformes de microscopie
 
-(for you and others)
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+\vspace{2cm}
 
-* A file browser is not a data management tool
-* Enforcing standards within your group can be hard
-* What happens when students / post-doc are gone?
-* Collaboration with data-scientist can be a challenge
+* Mise en commun des instruments (une douzaine de microscopes)
+* Personnel plateforme: suivi technique & maintenance
+* Formation des utilisateurs
+:::
+::: {.column width="50%"}
+![Microscope confocal zeiss @ IBDM](images/zeiss_lsm780_ibdm.jpg){ height=60% }
+:::
+::::::::::::::
 
-## Data management plan
 
-* Mandated by institutions or the ANR (since last year)
-* As open as possible, as closed as necessary
-* Here is a [template](https://dmp.opidor.fr/template_export/1858712127.pdf)
+## Structure et type de données
 
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+\vspace{2cm}
 
-## FAIR
+* sectionnement optique → données 3D
+* imagerie du vivant → multiples points de temps
+* multi-cannaux
+:::
+::: {.column width="50%"}
+![© Serge Van de Pavert CIML](images/mouseUltraMicroscope_Serge_Van_de_Pavert.png){ height=60% }
+:::
+::::::::::::::
 
-> **F**indable
+**Total de l'ordre de 2 Po / an**
 
-> **A**ccessible
+# Gestion des données
 
-> **I**nteroperable
+## Enjeux de conservation
 
-> **R**e-usable data
+- Traçabilité des métadonnées
 
+  * d'instrumentation
+  * expérimentales
 
-# What?
+- Conservation des données secondaires
 
-## Some history
+  * segmentations et régions d'intérêt
+  * méthodes d'analyse (_workflows_)
 
-- 1990s first commercial CCD
-- 2000-2010 the Metamorph era (and nd / stk files)
-- 2005 sq. formats explosion (vendor lock-in strategy)
-- since 2010 :
-  * change of paradigm regarding open-source,
-  * federation of global microscopy community
+- Constitution d'ensembles d'apprentissage pour le _deep learning_
 
+  * dépend de l'annotation correcte
+  * accessibilité d'infrastructures de calcul (en particulier GPU)
 
-## Openmicroscopy provides standards
 
-- Managed by [the U. of Dundee group](https://www.openmicroscopy.org/) / Glencoe software (Jason Swedlow, Josh Moore)
-- Defined OME-TIFF (data + metadata in a single file)
-- created BioFormats
-- Omero is also used in the industry (CROs, Perkin Elmer)
+## Outils de conservation
 
+![OMERO est le standard _de facto_](images/omero-overview.png)
 
-------------------
 
+## Automatisation
 
-![Overview of the omero tool suite](images/omero-overview.png)
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+![imports sur chaque site](images/site_architecture7.png)
+:::
+::: {.column width="50%"}
+![Fédération des données publiques](images/federation.png)
+:::
+:::::::::
 
+## À faire
 
-* one server / multiple clients
-* user groups / permission granularity
+- Intégration :
 
-## Dataflow
+  - Lien avec le SI des labos
+  - Authentification commune
 
-## {data-transition="None"}
+- Culture de la gestion des données :
 
-![Data flow within the institute](images/site_architecture1.png)
+  - Formation aux outils par les plateformes
+  - Outils d'annotation, vocabulaires communs
 
-## {data-transition="None"}
+- _Data Curation_ :
 
-![Data flow within the institute](images/site_architecture2.png)
-
-## {data-transition="None"}
-
-![Data flow within the institute](images/site_architecture3.png)
-
-## {data-transition="None"}
-
-![Data flow within the institute](images/site_architecture4.png)
-
-## {data-transition="None"}
-
-![Data flow within the institute](images/site_architecture5.png)
-
-## {data-transition="None"}
-
-![Data flow within the institute](images/site_architecture6.png)
-
-## {data-transition="None"}
-
-![Data flow within the institute](images/site_architecture7.png)
-
---------
-
-
-> raw data is not (necessarily) copied
-
-
-## Data Federation
-
-At the University, National and International levels
-
-![](images/federation.png)
-
-
-## Features overview
-
-### Webclient
-
-* [Browser](https://centuri-engineering.univ-amu.fr/omero/)
-
-* [Viewer](https://centuri-engineering.univ-amu.fr/omero/webclient/img_detail/18498/?dataset=892)
-
-* [ROIs](https://centuri-engineering.univ-amu.fr/omero/webclient/img_detail/23604/?dataset=1249) are managed (also to/from ImageJ)
-
-* [3D Viewer](https://centuri-engineering.univ-amu.fr/omero/fpbioimage/viewer/11063/)
-
-* [Figure](https://centuri-engineering.univ-amu.fr/omero/figure/file/141436)
-
-### Search and Annotations
-
-* Readily available: search over names
-* Annotations are harder
-* [Cards based annotations](https://centuri-engineering.univ-amu.fr/cataloger/)
-
-
-### Fiji Plugin
-
-![The ImageJ plugin](images/fiji_client.png)
-
-
-# How and when?
-
-
-## Costs
-
-* One server (less than 3k€)
-* Mainly HR
-
-## HR implications
-
-* Research engineer @ 50% FTE (centuri):
-
-  - manage the federated databases
-  - interface with data analysts
-  - custom dev
-
-. . .
-
-* In each institute:
-
-  - Training session
-  - Referee for user management / on site admin
-  - A "backup" sysadmin
-
-
-## When?
-
-## Setup step (first trimester 2021)
-
-* Renew list of personnel, access to disks
-* Automated import strategy (old data)
-* Automated import strategy (new data)
-* Automated annotation ?
-
-## Usage and adoption (throughout 2021)
-
-* Training of post-docs & PhDs
-* Freezing of the production workflow
+  - Quelles données doit-on garder ?
+  - Qui fait ce travail ?
 
 
 # Conclusion
 
+## Le Projet MuDiS4Ls
 
-* **Findable** : through filenames, annotations
-* **Accessible** : publish & share from the web client
-* **Interoperable** : download in a standard format
-* **Re-usable** : tracked metadata
+Le nœud BioImage Informatics de France BioImaging est partenaire de l'Institut Français de BioInformatique sur le projet **Mutualised Digital Space for FAIR Life Sciences**
+
+* Déploiement d'OMERO dans les mésocentres
+* Accessibilité des outils
+* Ressources humaines @FBI et dans les laboratoires
+* Accompagnement à l'établissement des PGD
+
+## Perspectives: Nouveaux formats de fichiers
+
+> `ome.zarr`: un nouveau format de fichier pour les données de microscopie
+
+
+:::::::::::::: {.columns}
+::: {.column width="80%"}
+
+* ZARR: format de données numériques adapté à l'accès distant:
+
+  * _chunks_
+  * accès concurrent
+  * stockage orienté objet (S3)
+
+* ome.zarr: spécification des attributs des données de microscopie
+
+  * Données multi-échelle (pyramides)
+  * Métadonnées instrumentales (schéma omero)
+  * Régions d'intérêt
+  * Données tabulaires
+  * Maillages, etc.
+:::
+::: {.column width="20%"}
+
+![](images/logo_zarr.png)
+
+::::
+::::::::::::
