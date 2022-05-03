@@ -9,47 +9,54 @@ center: false
 
 # What?
 
-:::::::::::::: {.columns  align=left}
-::: {.column width="50%"}
-[OMERO](https://openmicroscopy.org/omero) is a microscopy data management tool.
-It helps you **organize**, **access** and **archive** your data.
+:::::::::::::: {.columns}
+::: {.column width="40%"}
 
-This tool will be made available as a centralized ressource in your institute
+<p align="left">
+[OMERO](https://openmicroscopy.org/omero) is a microscopy image management platform.
+It helps you **organize**, **access** and **archive** your data.
+</p>
+
 :::
-::: {.column width="50%"}
+::: {.column width="60%"}
 ![](images/omero-overview.png)
 :::
 ::::::::::::::
 
+
 # Why?
+
+
 
 ## Microscopy data is big and complex
 
 * Long experiments
-* Screens
 * Data intensive microscopes (e.g. Light sheet)
-* Complicated data (super-res, speckle)
+* Complicated data (super-resolution, heterogenous data)
 
----------
 
-> Need to **organize** both data and metadata
+> We need to **organize** both data and metadata
+
+# What's in it for you as a researcher?
+
+## Access your data from anywhere
+
+* Browse and build figures directly from the web
+* With your tools (ImageJ / Fiji, Napari, QPath ...)
+* Even once your student / post-doc is gone
+* Easily share with data analysts
 
 
 ## Keeping data safe
 
-Your microscopy data will be stored in the Datacenter with onsite and offsite backups.
+Your microscopy data will be stored
 
-## Keeping data accessible
-
-* Access your data from anywhere
-* From the web
-* Or with your tools (ImageJ / Fiji, Napari, QPath ...)
-* Even once your student / post-doc is gone
-* Easily share with your data scientists collaborators
+- in the datacenter
+- with onsite and offsite backups
+- by data management professionals
 
 
 ## Now your data is [FAIR](https://www.go-fair.org/fair-principles/)
-
 
 * **Findable** : through filenames, annotations, tags
 * **Accessible** : publish & share from the web client
@@ -60,9 +67,7 @@ Your microscopy data will be stored in the Datacenter with onsite and offsite ba
 
 ## The new data life cycle
 
-![sketch f the data life cycle](images/data_cycle.svg)
+![](images/data_cycle.svg)
 
 
-## Calendar
-
-> TBD
+## Roadmap
