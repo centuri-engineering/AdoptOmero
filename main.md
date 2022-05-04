@@ -31,8 +31,8 @@ It helps you **organize**, **access** and **archive** your data.
 ## Microscopy data is big and complex
 
 * Long experiments
-* Data intensive microscopes (e.g. Light sheet)
-* Complicated data (super-resolution, heterogenous data)
+* Data intensive microscopes (e.g. light sheet)
+* Complicated data (super-resolution, spatial transcriptomics)
 
 
 > We need to **organize** both data and metadata
@@ -42,19 +42,24 @@ It helps you **organize**, **access** and **archive** your data.
 ## Access your data from anywhere
 
 * Browse and build figures directly from the web
-* With your tools (ImageJ / Fiji, Napari, QPath ...)
-* Even once your student / post-doc is gone
+* Connect to OMERO through
+your prefered tools (ImageJ, Napari, QPath, etc.)
+
+
+## Keep your data findable and usable
+
+* Keep track of all important metadata
+* Organize with tags and annotations
+* Find your data even once your student is gone
 * Easily share with data analysts
 
-
-## Keeping data safe
+## Keeping your data safe
 
 Your microscopy data will be stored
 
 - in the datacenter
 - with onsite and offsite backups
 - by data management professionals
-
 
 ## Now your data is [FAIR](https://www.go-fair.org/fair-principles/)
 
@@ -69,5 +74,16 @@ Your microscopy data will be stored
 
 ![](images/data_cycle.svg)
 
+:::::::::::::: {.columns}
+::: {.column width="40%"}
+1. Acquire the images
+2. Import in OMERO
+3. Analyse
+:::
+::: {.column width="60%"}
+4. Publish
+5. Archive
+:::
+::::::::::::::
 
 ## Roadmap
