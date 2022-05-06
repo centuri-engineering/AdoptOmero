@@ -1,10 +1,12 @@
 ---
 title: OMERO is comming
 author: Guillaume Gay, FBI
-fontsize: 10pt
+fontsize: 8pt
 width: 1024
 height: 780
-center: false
+margin: 0.01
+center: true
+disableLayout: false
 ---
 
 # What?
@@ -27,13 +29,11 @@ It helps you **organize**, **access** and **archive** your data.
 # Why?
 
 
-
 ## Microscopy data is big and complex
 
 * Long experiments
 * Data intensive microscopes (e.g. light sheet)
-* Complicated data (super-resolution, spatial transcriptomics)
-
+* Complicated data (super-resolution, spatial transcriptomics ...)
 
 > We need to **organize** both data and metadata
 
@@ -45,11 +45,10 @@ It helps you **organize**, **access** and **archive** your data.
 * Connect to OMERO through
 your prefered tools (ImageJ, Napari, QPath, etc.)
 
-
 ## Keep your data findable and usable
 
 * Keep track of all important metadata
-* Organize with tags and annotations
+* Organize with **tags** and **annotations**
 * Find your data even once your student is gone
 * Easily share with data analysts
 
@@ -58,10 +57,10 @@ your prefered tools (ImageJ, Napari, QPath, etc.)
 Your microscopy data will be stored
 
 - in the datacenter
-- with onsite and offsite backups
+- with on-site and off-site backups
 - by data management professionals
 
-## Now your data is [FAIR](https://www.go-fair.org/fair-principles/)
+## Your data becomes [FAIR](https://www.go-fair.org/fair-principles/)
 
 * **Findable** : through filenames, annotations, tags
 * **Accessible** : publish & share from the web client
@@ -74,16 +73,10 @@ Your microscopy data will be stored
 
 ![](images/data_cycle.svg)
 
-:::::::::::::: {.columns}
-::: {.column width="40%"}
-1. Acquire the images
-2. Import in OMERO
-3. Analyse
-:::
-::: {.column width="60%"}
-4. Publish
-5. Archive
-:::
-::::::::::::::
+
+<div class="r-fit-text"> 1. Aquire → 2. Import → 3. Analyze → 4. Publish → 5. Archive </div>
+
 
 ## Roadmap
+
+![](images/roadmap.svg)
