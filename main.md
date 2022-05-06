@@ -1,6 +1,7 @@
 ---
 title: OMERO is comming
 author: Guillaume Gay, FBI
+date: (hit space on your keyboard to move to next page) 
 fontsize: 8pt
 width: 1024
 height: 780
@@ -8,6 +9,7 @@ margin: 0.01
 center: true
 disableLayout: false
 ---
+
 
 # What?
 
