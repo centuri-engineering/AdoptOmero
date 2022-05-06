@@ -1,5 +1,5 @@
 ---
-title: OMERO is comming
+title: OMERO is coming
 author: Guillaume Gay, FBI
 date: (hit space on your keyboard to move to next page) 
 fontsize: 8pt
