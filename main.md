@@ -76,7 +76,7 @@ Your microscopy data will be stored
 ![](images/data_cycle.svg)
 
 
-<div class="r-fit-text"> 1. Aquire → 2. Import → 3. Analyze → 4. Publish → 5. Archive </div>
+<div class="r-fit-text"> 1. Acquire → 2. Import → 3. Analyze → 4. Publish → 5. Archive </div>
 
 
 ## Roadmap
