@@ -1,7 +1,7 @@
 ---
 title: OMERO is coming
 author: Guillaume Gay, FBI
-date: (hit space on your keyboard to move to next page) 
+date: (hit space on your keyboard to move to next page)
 fontsize: 8pt
 width: 1024
 height: 780
@@ -31,7 +31,7 @@ It helps you **organize**, **access** and **archive** your data.
 # Why?
 
 
-## Microscopy data is big and complex
+## Microscopy data are big and complex
 
 * Long experiments
 * Data intensive microscopes (e.g. light sheet)
@@ -62,7 +62,7 @@ Your microscopy data will be stored
 - with on-site and off-site backups
 - by data management professionals
 
-## Your data becomes [FAIR](https://www.go-fair.org/fair-principles/)
+## Your data become [FAIR](https://www.go-fair.org/fair-principles/)
 
 * **Findable** : through filenames, annotations, tags
 * **Accessible** : publish & share from the web client
