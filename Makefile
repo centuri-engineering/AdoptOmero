@@ -5,6 +5,7 @@ html:
 	ln -s ../../reveal.js build_html
 	cp -R images build_html
 	pandoc -t revealjs \
+		--from markdown+emoji \
 		-V theme=solarized \
 		-V background-image=images/FBI_bg.svg \
 		-V background-color="#f9f9f9" \
